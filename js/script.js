@@ -5,6 +5,7 @@ let count = 0
 
 
 for (const buttons of button) {
+   
    buttons.addEventListener('click',function(){
      
    // Seats Count
@@ -17,7 +18,7 @@ for (const buttons of button) {
    const nextBtn = document.getElementById('next-btn');
    nextBtn.classList.remove('opacity-50')
    nextBtn.classList.remove('cursor-not-allowed')
-
+   
 
    // main Style
    const btnbackgroundColor = buttons.style.backgroundColor = 'green'
@@ -49,9 +50,63 @@ for (const buttons of button) {
   
    const grandTotal =  document.getElementById('grand-total').innerText = totalPrice;
    
+  
+   
+   const addBtn = document.getElementById('add-btn');
+   addBtn.addEventListener('click',function(){
+      const cupponInput = document.getElementById('cuppon-input').value.toUpperCase();
+      const cupponCode = cupponInput.split(" ").join("")
+      console.log(cupponCode);
+      if (cupponCode === 'NEW15') {
+          const discountTotal = (grandTotal * 15) / 100;
+          const totalAmmount = grandTotal - discountTotal;
+          document.getElementById('grand-total').innerText = totalAmmount.toFixed(2);
+          const cupponMain = document.getElementById('cuppon-main');
+          cupponMain.style.display = 'none'
+      }
+      if (cupponCode === 'COUPLE20'){
+         const discountTotal = (grandTotal * 15) / 100;
+          const totalAmmount = grandTotal - discountTotal;
+          document.getElementById('grand-total').innerText = totalAmmount.toFixed(2);
+          const cupponMain = document.getElementById('cuppon-main');
+          cupponMain.style.display = 'none'
+      }else{
+         alert('please valid cuppon code');
+      }
 
    })
-}
+
+
+
+
+
+
+
+
+
+   // next button degine
+   const nextButton = document.getElementById('next-btn');
+  
+   nextButton.addEventListener('click', function(){
+      const main = document.getElementById('main');
+      main.classList.add('hidden')
+      const success =  document.getElementById('success');
+      success.classList.remove('hidden')
+   })
+
+   //Continoue Button Degine
+   const continoueButton = document.getElementById('continoue-btn');
+  
+   continoueButton.addEventListener('click', function(){
+      const main = document.getElementById('main');
+      main.classList.remove('hidden')
+      const success =  document.getElementById('success');
+      success.classList.add('hidden')
+   })
+
+
+   })
+};
 
 
 let setsLeft = 40;
@@ -68,3 +123,4 @@ function seatsLeft(){
 function ubdateSeatsLeft(){
    document.getElementById('sets').innerHTML = setsLeft;
 } 
+

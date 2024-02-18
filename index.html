@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div id="main">
+    <div id="main" class="">
       <nav class="mt-12 mb-8">
         <div class="navbar bg-base-100">
           <div class="navbar-start">
@@ -342,15 +342,16 @@
                 <h1>BDT <span id="ammount">0</span></h1>
               </div>
               <!--Input Seat-->
-              <div class="flex justify-between p-4 relative">
+              <div id="cuppon-main" class="flex justify-between p-4 relative">
                 <input
+                  
                   class="w-full p-4 rounded-xl outline-none"
                   type="text"
                   placeholder="Have any copupon?"
                   name=""
-                  id=""
+                  id="cuppon-input"
                 />
-                <button class="btn relative  -ms-20 bg-green-700 text-white">
+                <button id="add-btn" class="btn relative  -ms-20 bg-green-700 text-white">
                   Apply
                 </button>
               </div>
@@ -381,7 +382,7 @@
                 </div>
               </form>
             </div>
-            <button id="next-btn" class="btn w-full bg-green-600 text-white mt-8 opacity-50 cursor-not-allowed">Next</button>
+            <button id="next-btn"  class="btn w-full bg-green-600 text-white mt-8 opacity-50 cursor-not-allowed">Next</button>
             <div class="flex justify-around mt-6">
               <h1>Terms and Conditions</h1>
               <h1>Cancellation Policy</h1>
@@ -391,6 +392,20 @@
       </section>
     </div>
 
+    <div id="success" class="w-full bg-gray-400 h-screen relative hidden" >
+      <div id="purchese" class="w-[718px] h-[481px] bg-white absolute top-2/4 left-2/4 transform translate-x-[-50%] translate-y-[-50%]">
+        <div class="mx-auto text-center py-10">
+          <img class="mx-auto" src="images/success.png" alt="">
+        <h3 class="text-green-600 text-2xl font-bold mt-5 mb-10">SUCCESS</h3>
+        <h2 class="text-xl font-medium mb-1">Thank you for Booking Our Bus Seats. 
+        </h2>
+        <h2 class="text-xl font-medium mt-3">We are working hard to find the best service and deals for you. 
+        </h2>
+        <h3 class="text-xl font-light ">Shortly you will find a confirmation in your email.</h3>
+        <button id="continoue-btn" class="btn bg-green-500 text-white font-semibold text-xl w-64 rounded-3xl mt-5">Continue</button>
+        </div>
+      </div>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>
