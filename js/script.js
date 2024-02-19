@@ -102,8 +102,6 @@
      if (setsLeft > 0) {
          setsLeft--;
          ubdateSeatsLeft();
-     } else {
-         alert('All Ticket Is Sell Please Try Again Later');
      }
  }
 

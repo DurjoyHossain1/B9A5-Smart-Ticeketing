@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>P Paribahan</title>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
       rel="stylesheet"
@@ -74,7 +74,7 @@
           id="Container"
           class="rounded-[28px] bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(images/banner.png)] h-[550px] bg-no-repeat bg-center max-w-[1170px] w-full mx-auto"
         >
-          <div class="p-20 space-y-7">
+          <div class="md:p-20 p-2 space-y-7">
             <h1
               class="text-white text-center font-extrabold text-6xl leading-[60px] raleway"
             >
@@ -102,7 +102,7 @@
           class="mx-auto max-w-[1170px] w-full mx-auto flex flex-col md:flex-row justify-between mb-12"
         >
           <div
-            class="bg-[#FFBF0F] lg:w-[573px] h-52 rounded-2xl flex justify-between p-14 relative"
+            class="bg-[#FFBF0F] lg:w-[573px] h-52 rounded-2xl flex justify-between p-14 relative mb-5 md:mb-0"
           >
             <div>
               <h2 class="font-black text-4xl">15% OFF</h2>
@@ -110,9 +110,9 @@
               <h5>use by January 2024</h5>
             </div>
             <img
-              class="absolute"
+              class="absolute hidden md:block"
               id="info-img"
-              src="images/info-devider.png"
+              src="images/cupon-devider.png"
               alt=""
             />
             <div>
@@ -122,7 +122,7 @@
             </div>
           </div>
           <div
-            class="bg-[#F78C9C] lg:w-[573px] h-52 rounded-2xl flex justify-between p-14 relative"
+            class="bg-[#F78C9C] lg:w-[573px] h-52 rounded-2xl flex justify-between p-14 relative mb-5 md:mb-0"
           >
             <div>
               <h2 class="font-black text-4xl">20% OFF
@@ -131,9 +131,9 @@
               <h5>use by January 2024</h5>
             </div>
             <img
-              class="absolute"
+              class="absolute hidden md:block"
               id="info-img"
-              src="images/info-devider.png"
+              src="images/cupon-devider.png"
               alt=""
             />
             <div>
@@ -160,9 +160,9 @@
           Yes, you can run unit tests and view the results directly within the
           app. The integrated <br />testing features allow for a streamlined .
         </p>
-        <div class="max-w-[1170px] w-full mx-auto bg-[#fff] rounded-3xl">
-          <div class="flex justify-between p-4">
-            <div class="w-3/5">
+        <div class="md:max-w-[1170px] w-full mx-auto bg-[#fff] rounded-3xl relative">
+          <div class="flex flex-col md:flex-row  justify-between p-4">
+            <div class="md:w-3/5">
               <div class="flex justify-between w-full">
                 <div class="flex gap-3">
                   <img class="w-16 h-12" src="images/bus-logo.png" alt="" />
@@ -199,15 +199,18 @@
                 </div>
               </div>
             </div>
-            <div class="w-1/4 flex items-center justify-center flex-col">
+            <!--Info Devider Img-->
+            <img class="info-devider-img hidden md:block" src="images/info-devider.png" alt="">
+            <!--Info Devider Img-->
+            <div class="md:w-1/4 flex items-center justify-center flex-col">
               <img src="images/fare.png" alt="" />
               <h3 class="text-4xl">550 Taka</h3>
               <h4 class="text-2xl">Per Seat</h4>
             </div>
           </div>
         </div>
-        <div class="max-w-[1170px] w-full mx-auto mt-24 p-8 bg-[#fff] rounded-3xl flex">
-          <div id="card1">
+        <div class="md:max-w-[1170px] w-full mx-auto mt-24 p-8 bg-[#fff] rounded-3xl flex flex-col md:flex-row ">
+          <div class="md:w-[58%]" id="card1">
             <h1 class="text-2xl font-semibold">Select Your Seat</h1>
             <div class="flex justify-between mb-8 mt-8">
               <div class="flex">
@@ -219,7 +222,7 @@
                 <h2 class="text-green-600">Selected</h2>
               </div>
             </div>
-            <div class="flex justify-end">
+            <div class="md:flex justify-end">
               <button
                 class="btn mb-10 pb-4 pt-2 px-8 flex items-center justify-center"
               >
@@ -228,7 +231,7 @@
             </div>
 
             <div>
-              <div class="First flex items-center justify-between mt-4">
+              <div class="First flex  md:flex-row items-center justify-between mt-4">
                 <p>A</p>
                 <button id="buttons" class="button btn py-4 px-12">A1</button>
                 <button id="buttons" class="button btn py-4 px-12">A2</button>
@@ -307,29 +310,22 @@
               </div>
             </div>
           </div>
-          <div id="card2">
+          <div class="md:w-[40%]" id="card2">
             <h1 class="text-2xl font-semibold mb-12">Select Your Seat</h1>
             <!--First Div-->
             <div class="bg-[#F7F8F8]">
               <!--First Seat-->
-              <div class="flex justify-between p-4">
-                <div class="flex gap-2">
+              <div class="flex  justify-between p-4">
+                <div class="flex  gap-2">
                   <h1>Seat</h1>
                   <span class="text-white w-5 text-center font-extrabold bg-green-600" id="sets-count">0</span>
                 </div>
                 <h1>Class</h1>
                 <h1>Price</h1>
               </div>
-              <!--First Seat-->
-              <!-- <div class="flex justify-between p-4">
-                <h1>C2</h1>
-
-                <h1>Economoy</h1>
-                <h1>550</h1>
-              </div> -->
-              <!--Name and Ammount Seat-->
+              
               <div id="bus-name" class=" p-4 w-full">
-                 <span id="ticket-name" class="w-full grid grid-cols-3 gap-6">
+                 <span id="ticket-name" class="w-full grid  grid-cols-3 gap-6">
                   
                  </span>
               </div>
@@ -354,7 +350,7 @@
                 </button>
               </div>
               <!--Fourth Seat-->
-              <div class="flex justify-between p-4">
+              <div class="flex  justify-between p-4">
                 <h1>Grand Total</h1>
 
                 <h1>BDT <span id="grand-total">0</span></h1>
@@ -371,7 +367,7 @@
                 <!--Phone Number-->
                 <div class="mb-4">
                   <h1>Phone Number</h1>
-                  <input class="border w-full p-4 rounded-xl border-gray-300 outline-none" type="number" name="" id="" placeholder="Enter your phone number">
+                  <input  class="border w-full p-4 rounded-xl border-gray-300 outline-none" type="number" name="" id="number-input" placeholder="Enter your phone number">
                 </div>
                 <!--Phone Number-->
                 <div>
@@ -381,9 +377,9 @@
               </form>
             </div>
             <button id="next-btn"  class="btn w-full bg-green-600 text-white mt-8 opacity-50 cursor-not-allowed">Next</button>
-            <div class="flex justify-around mt-6">
-              <h1>Terms and Conditions</h1>
-              <h1>Cancellation Policy</h1>
+            <div class="flex  justify-around mt-6">
+              <h1 class="underline decoration-solid ">Terms and Conditions</h1>
+              <h1 class="underline decoration-solid ">Cancellation Policy</h1>
             </div>
           </div>
         </div>

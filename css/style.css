@@ -36,17 +36,17 @@ transform: translate(-50%, -50%);
     
 }
 #route{
-    border-bottom: dashed;
+    border-bottom: 1px dashed rgba(3, 7, 18, 0.3);
     margin-bottom: 10px;
 }
 #card1{
-    width: 58%;
+    /* width: 58%; */
     border-right: 1px  dashed  rgba(3, 7, 18, 0.3);
     padding-left: 4px;
     padding-right: 12px;
 }
 #card2{
-    width: 40%;
+    /* width: 40%; */
     padding-left: 4px;
 }
 #ticket-name{
@@ -55,4 +55,11 @@ transform: translate(-50%, -50%);
 #buttons:disabled{
      
     cursor: not-allowed;
+}
+.info-devider-img{
+    position: absolute;
+    top: 50%;
+    left: 66%;
+    transform: translate(47%, -50%);
+    height: 328px;
 }
